@@ -1,6 +1,6 @@
 Thanks for downloading this template!
 
-Template Name: DevFolio
+Template Name: Frank Flannery Portfolio
 Template URL: https://bootstrapmade.com/devfolio-bootstrap-portfolio-html-template/
-Author: BootstrapMade.com
+Author: Frank FlanneryBootstrapMade.com
 License: https://bootstrapmade.com/license/
