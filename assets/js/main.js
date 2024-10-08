@@ -249,3 +249,25 @@
   document.addEventListener('scroll', navmenuScrollspy);
 
 })();
+
+  /**
+   * Dad Joke API
+   */
+
+  document.getElementById('jokeButton').addEventListener('click', fetchJoke);
+
+function fetchJoke() {
+  fetch('https://icanhazdadjoke.com/', {
+    headers: {
+      'Accept': 'text/plain',
+      'User-Agent': 'MyWebsite (https://mywebsite.com/contact)'
+    }
+  })
+  .then(response => response.text())
+  .then(joke => {
+    document.getElementById('joke').textContent = joke;
+  })
+  .catch(error => {
+    document.getElementById('joke').textContent = 'Oops! Could not fetch a joke.';
+  });
+}

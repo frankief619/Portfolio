@@ -1620,7 +1620,30 @@ section,
   margin-right: 8px;
   color: var(--accent-color);
 }
+#joke-container {
+  max-width: 600px;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  margin: 0 auto; /* Center horizontally */
+}
 
+#joke {
+  font-size: 1.75rem; 
+  font-weight: bold;
+  color: #343a40; /* Match the heading color */
+  text-align: center;
+}
+
+/* Additional container to handle vertical centering */
+.center-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
 /*--------------------------------------------------------------
 # Starter Section Section
 --------------------------------------------------------------*/
