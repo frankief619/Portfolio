@@ -250,6 +250,46 @@
 
 })();
 
+ /**
+   * Contact Form
+   */
+ document.getElementById('contactForm').addEventListener('submit', function(event) {
+  event.preventDefault(); // Prevent the default form submission
+
+  // Hide any previous messages
+  document.querySelector('.sent-message').style.display = 'none';
+  document.querySelector('.error-message').style.display = 'none';
+
+  const formData = new FormData(this);
+
+  fetch('https://formspree.io/f/movqvkda', {
+      method: 'POST',
+      body: formData,
+      headers: {
+          'Accept': 'application/json'
+      }
+  })
+  .then(response => {
+      if (response.ok) {
+          // Display success message
+          document.querySelector('.sent-message').style.display = 'block';
+          
+          // Clear the form after successful submission
+          this.reset(); 
+      } else {
+          // If the response is not ok, display error message
+          throw new Error('Form submission failed');
+      }
+  })
+  .catch(error => {
+      // Display error message
+      document.querySelector('.error-message').textContent = 'There was an issue submitting your message. Please try again.';
+      document.querySelector('.error-message').style.display = 'block';
+  });
+});
+
+
+
   /**
    * Dad Joke API
    */
